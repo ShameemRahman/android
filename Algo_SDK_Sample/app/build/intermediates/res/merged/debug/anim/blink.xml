@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="400"
+
+        android:repeatMode="reverse"
+        android:repeatCount="5"/>
+</set>
+<!-- From: file:/C:/AndroidApps/mindwave/Android%20Developer%20Tools%204.2/EEG_Algo_SDK_Android/Algo_SDK_Sample/app/src/main/res/anim/blink.xml -->

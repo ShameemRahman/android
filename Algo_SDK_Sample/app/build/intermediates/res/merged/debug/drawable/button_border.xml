@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <corners
+        android:radius="10dp"
+        />
+
+</shape><!-- From: file:/C:/AndroidApps/mindwave/Android%20Developer%20Tools%204.2/EEG_Algo_SDK_Android/Algo_SDK_Sample/app/src/main/res/drawable/button_border.xml -->

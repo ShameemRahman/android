@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wf.bci.KeyBoardActivity"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical"
+    >
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:layout_gravity="right" />
+
+    <TextView android:text="Signal Quality:"
+        android:id="@+id/sqTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+    <TextView android:text="--"
+        android:id="@+id/sqText"
+        android:layout_toRightOf="@+id/sqTitle"
+        android:layout_marginLeft="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:text="SDK State:"
+        android:id="@+id/stateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/stateText"
+        android:layout_alignParentLeft="true" />
+    <TextView android:text="--"
+        android:id="@+id/stateText"
+        android:layout_toRightOf="@+id/stateTitle"
+        android:layout_below="@+id/sqTitle"
+        android:layout_marginLeft="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/startButton"
+        android:enabled="false"
+        android:textSize="12dp"
+        android:minHeight="20dp"
+        android:maxHeight="20dp"
+        android:layout_below="@+id/stateTitle"
+        android:layout_alignParentLeft="true"
+        android:visibility="visible"
+        android:layout_alignRight="@+id/sqTitle" />
+
+    <Button
+        android:id="@+id/selectDigit"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:onClick="selectDigitClicked"
+        android:textSize="@dimen/notification_big_circle_margin"
+        android:layout_gravity="right"
+        android:text="select"
+
+        android:layout_alignRight="@+id/startButton" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/stopButton"
+        android:enabled="false"
+        android:textSize="12dp"
+        android:maxHeight="20dp"
+        android:minHeight="20dp"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentLeft="true"
+        android:visibility="visible"
+        android:layout_alignRight="@+id/startButton" />
+
+    <TextView
+        android:text="--"
+        android:id="@+id/attText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/startButton"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:text="--"
+        android:id="@+id/medText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blinkImage"
+        android:minHeight="20dp"
+        android:minWidth="10dp"
+        android:src="@mipmap/led_off"
+        android:scaleType="fitXY"
+        android:maxHeight="20dp"
+        android:maxWidth="10dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/stateText" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount: "
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/amountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        >
+
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:horizontalSpacing="80dp"
+        android:verticalSpacing="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+
+        >
+
+        <Button
+            android:id="@+id/digit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="1"
+
+            android:text="1" />
+
+        <Button
+            android:id="@+id/digit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            android:tag="2"
+            android:text="2"
+            android:textSize="@dimen/font_size" />
+
+        <Button
+            android:id="@+id/digit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="3"
+            android:textSize="@dimen/font_size"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/digit4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="4"
+            android:text="4" />
+        <Button
+            android:id="@+id/digit5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="5"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/digit6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="6"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/digit7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="7"
+            android:text="7" />
+        <Button
+            android:id="@+id/digit8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="8"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/digit9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:tag="9"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/digit0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_size"
+            android:layout_columnSpan="3"
+            android:layout_gravity="center_horizontal"
+            android:tag="0"
+            android:text="0"
+            />
+
+
+
+    </GridLayout>
+
+
+
+
+
+</LinearLayout>

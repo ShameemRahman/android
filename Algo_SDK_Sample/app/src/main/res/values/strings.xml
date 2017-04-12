@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Wells BCI</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_activity_transfer_page">TransfersPage</string>
+
+    <string name="country_prompt">Select Account</string>
+
+    <string-array name="country_arrays">
+        <item>My checking a/c XXXXX48134</item>
+        <item>My savings  a/c XXXXX31123</item>
+
+    </string-array>
+
+    <string-array name="to_accts">
+
+        <item>Lourie Johnson</item>
+        <item>Kathy Kase</item>
+        <item>William Peters</item>
+        <item>Henry Wells</item>
+    </string-array>
+
+    <color name="red">#ffff0000</color>
+    <color name="white">#FFFFFF</color>
+    <string name="title_activity_key_board">KeyBoardActivity</string>
+
+
+</resources>
